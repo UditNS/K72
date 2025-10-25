@@ -12,7 +12,7 @@ const Home = () => {
       </div>
       
       {/* Scrollable content on top */}
-      <div className='relative min-h-screen w-full z-10'>
+      <div className='relative min-h-screen w-full z-10 flex flex-col justify-between'>
         <HomeHeroText />
         <HomeBottomText />
       </div>
