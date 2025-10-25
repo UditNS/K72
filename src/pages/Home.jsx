@@ -2,20 +2,21 @@ import React from 'react'
 import Video from '../components/home/Video'
 import HomeHeroText from '../components/home/HomeHeroText'
 import HomeBottomText from '../components/home/HomeBottomText'
+
 const Home = () => {
   return (
     <div>
-      {/* This component is fixed even when i scroll */}
-      <div className='w-screen min-h-screen fixed'> 
-          <Video />
+      {/* Fixed background video */}
+      <div className='w-screen h-screen fixed top-0 left-0 z-0'> 
+        <Video className="w-full h-full" />
       </div>
-      {/* This component sits on top of the video component and its scrollable while the video is fixed */}
-      <div className='relative min-h-screen w-full'>
+      
+      {/* Scrollable content on top */}
+      <div className='relative min-h-screen w-full z-10'>
         <HomeHeroText />
         <HomeBottomText />
       </div>
     </div>
-    
   )
 }
 
